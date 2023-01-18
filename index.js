@@ -4,6 +4,9 @@ import path from 'node:path';
 import url from 'node:url';
 
 const port = 3000;
+const host = 'localhost';
+// const host = '0.0.0.0'; // use this for replit
+
 const server = http.createServer();
 
 // create more files
@@ -65,4 +68,4 @@ server.on('request', (req, res) => {
   });
 });
 
-server.listen(parseInt(port));
+server.listen(parseInt(port), host);
